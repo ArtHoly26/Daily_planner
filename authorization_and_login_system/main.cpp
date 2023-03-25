@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <fstream>
 #include <Windows.h>
@@ -20,10 +20,10 @@ void Login (string login)
 	string path = "Login.txt";
 	ofstream log;
 	log.open(path);
-	if (!log.is_open()) cout << "Îøèáêà çàïèñè" << endl;
+	if (!log.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð·Ð°Ð¿Ð¸ÑÐ¸" << endl;
 	else
 	{
-		cout << "Ââåäèòå íîâûé ëîãèí ïîëüçîâàòåëÿ: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð²Ñ‹Ð¹ Ð»Ð¾Ð³Ð¸Ð½ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ: " << endl;
 		cin >> login;
 		log << login;
 		this->login = login;
@@ -36,10 +36,10 @@ void Password(string password)
 	string path = "Password.txt";
 	ofstream pass;
 	pass.open(path);
-	if(!pass.is_open()) cout << "Îøèáêà: " << endl;
+	if(!pass.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ°: " << endl;
 	else
 	{
-		cout << "Ââåäèòå íîâûé ïàðîëü: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð²Ñ‹Ð¹ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ: " << endl;
 		cin >> password;
 		pass << password;
 		this->password = password;
@@ -53,10 +53,10 @@ void AuthorizationLogin(string login)
 	string log1;
 	ifstream read;
 	read.open(path);
-	if (!read.is_open()) cout << "Îøèáêà çàïèñè: " << endl;
+	if (!read.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð·Ð°Ð¿Ð¸ÑÐ¸: " << endl;
 	else
 	{
-		cout << "Ââåäèòå ëîãèí: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð»Ð¾Ð³Ð¸Ð½: " << endl;
 		cin >> log1;
 		while (!read.eof())
 		{
@@ -75,10 +75,10 @@ void AuthorizationPassword(string password)
 	string password1;
 	ifstream read;
 	read.open(path);
-	if (!read.is_open()) cout << "Îøèáêà: " << endl;
+	if (!read.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ°: " << endl;
 	else
 	{
-		cout << "Ââåäèòå ïàðîëü: " << endl;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ: " << endl;
 		cin >> password1;
 		while (!read.eof())
 		{
@@ -108,10 +108,10 @@ void AddMonday()
 		string notes;
 		writen.open(path,ofstream::app);
 
-		if (!writen.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà!";
+		if (!writen.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!";
 		else
 		{
-			cout << "Äåíü íåäåëè ïîíåäåëüíèê: ââåäèòå çàìåòêó" << endl;
+			cout << "Ð”ÐµÐ½ÑŒ Ð½ÐµÐ´ÐµÐ»Ð¸ Ð¿Ð¾Ð½ÐµÐ´ÐµÐ»ÑŒÐ½Ð¸Ðº: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð°Ð¼ÐµÑ‚ÐºÑƒ" << endl;
 			SetConsoleCP(1251);
 			getline(cin, notes);
 			writen << notes;
@@ -127,10 +127,10 @@ void AddTuesday()
 	string notes;
 	writen.open(path, ofstream::app);
 
-	if (!writen.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà!";
+	if (!writen.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!";
 	else
 	{
-		cout << "Äåíü íåäåëè âòîðíèê, ââåäèòå çàìåòêó" << endl;
+		cout << "Ð”ÐµÐ½ÑŒ Ð½ÐµÐ´ÐµÐ»Ð¸ Ð²Ñ‚Ð¾Ñ€Ð½Ð¸Ðº, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð°Ð¼ÐµÑ‚ÐºÑƒ" << endl;
 		SetConsoleCP(1251);
 		getline(cin, notes);
 		writen << notes << "\n";
@@ -146,10 +146,10 @@ void AddWednsday()
 	string notes;
 	writen.open(path, ofstream::app);
 
-	if (!writen.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà!";
+	if (!writen.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!";
 	else
 	{
-		cout << "Äåíü íåäåëè ñðåäà, ââåäèòå çàìåòêó" << endl;
+		cout << "Ð”ÐµÐ½ÑŒ Ð½ÐµÐ´ÐµÐ»Ð¸ ÑÑ€ÐµÐ´Ð°, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð°Ð¼ÐµÑ‚ÐºÑƒ" << endl;
 		SetConsoleCP(1251);
 		getline(cin, notes);
 		writen << notes << "\n";
@@ -165,10 +165,10 @@ void AddThursday()
 	string notes;
 	writen.open(path, ofstream::app);
 
-	if (!writen.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà!";
+	if (!writen.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!";
 	else
 	{
-		cout << "Äåíü íåäåëè ÷åòâåðã, ââåäèòå çàìåòêó" << endl;
+		cout << "Ð”ÐµÐ½ÑŒ Ð½ÐµÐ´ÐµÐ»Ð¸ Ñ‡ÐµÑ‚Ð²ÐµÑ€Ð³, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð°Ð¼ÐµÑ‚ÐºÑƒ" << endl;
 		SetConsoleCP(1251);
 		getline(cin, notes);
 		writen << notes << "\n";
@@ -184,10 +184,10 @@ void AddFriday()
 	string notes;
 	writen.open(path, ofstream::app);
 
-	if (!writen.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà!";
+	if (!writen.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!";
 	else
 	{
-		cout << "Äåíü íåäåëè ïÿòíèöà, ââåäèòå çàìåòêó" << endl;
+		cout << "Ð”ÐµÐ½ÑŒ Ð½ÐµÐ´ÐµÐ»Ð¸ Ð¿ÑÑ‚Ð½Ð¸Ñ†Ð°, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð°Ð¼ÐµÑ‚ÐºÑƒ" << endl;
 		SetConsoleCP(1251);
 		getline(cin, notes);
 		writen << notes << "\n";
@@ -203,10 +203,10 @@ void AddSaturday()
 	string notes;
 	writen.open(path, ofstream::app);
 
-	if (!writen.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà!";
+	if (!writen.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!";
 	else
 	{
-		cout << "Äåíü íåäåëè ñóááîòà, ââåäèòå çàìåòêó" << endl;
+		cout << "Ð”ÐµÐ½ÑŒ Ð½ÐµÐ´ÐµÐ»Ð¸ ÑÑƒÐ±Ð±Ð¾Ñ‚Ð°, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð°Ð¼ÐµÑ‚ÐºÑƒ" << endl;
 		SetConsoleCP(1251);
 		getline(cin, notes);
 		writen << notes << "\n";
@@ -222,10 +222,10 @@ void AddSunday()
 	string notes;
 	writen.open(path, ofstream::app);
 
-	if (!writen.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà!";
+	if (!writen.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!";
 	else
 	{
-		cout << "Äåíü íåäåëè âîñêðåñåíüå, ââåäèòå çàìåòêó" << endl;
+		cout << "Ð”ÐµÐ½ÑŒ Ð½ÐµÐ´ÐµÐ»Ð¸ Ð²Ð¾ÑÐºÑ€ÐµÑÐµÐ½ÑŒÐµ, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð°Ð¼ÐµÑ‚ÐºÑƒ" << endl;
 		SetConsoleCP(1251);
 		getline(cin, notes);
 		writen << notes << "\n";
@@ -241,10 +241,10 @@ void ReadMonday()
 	ifstream read;
 	read.open(path);
 
-	if (!read.is_open()) cout << "Îøèáêà ÷òåíèÿ ôàéëà!" << endl;
+	if (!read.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!" << endl;
 	else
 	{
-		cout << "Çàìåòêè íà ïîíåäåëüíèê: " << endl;
+		cout << "Ð—Ð°Ð¼ÐµÑ‚ÐºÐ¸ Ð½Ð° Ð¿Ð¾Ð½ÐµÐ´ÐµÐ»ÑŒÐ½Ð¸Ðº: " << endl;
 
 		while (!read.eof())
 		{
@@ -262,10 +262,10 @@ void ReadTuesday()
 	string msg;
 	ifstream read;
 	read.open(path);
-	if (!read.is_open()) cout << "Îøèáêà ÷òåíèÿ ôàéëà!" << endl;
+	if (!read.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!" << endl;
 	else
 	{
-		cout << "Çàìåòêè íà âòîðíèê: " << endl;
+		cout << "Ð—Ð°Ð¼ÐµÑ‚ÐºÐ¸ Ð½Ð° Ð²Ñ‚Ð¾Ñ€Ð½Ð¸Ðº: " << endl;
 		while (!read.eof())
 		{
 			msg = "";
@@ -281,10 +281,10 @@ void ReadWednsday()
 	string msg;
 	ifstream read;
 	read.open(path);
-	if (!read.is_open()) cout << "Îøèáêà ÷òåíèÿ ôàéëà!" << endl;
+	if (!read.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!" << endl;
 	else
 	{
-		cout << "Çàìåòêè íà ñðåäó: " << endl;
+		cout << "Ð—Ð°Ð¼ÐµÑ‚ÐºÐ¸ Ð½Ð° ÑÑ€ÐµÐ´Ñƒ: " << endl;
 		while (!read.eof())
 		{
 			msg = "";
@@ -300,10 +300,10 @@ void ReadThursday()
 	string msg;
 	ifstream read;
 	read.open(path);
-	if (!read.is_open()) cout << "Îøèáêà ÷òåíèÿ ôàéëà!" << endl;
+	if (!read.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!" << endl;
 	else
 	{
-		cout << "Çàìåòêè íà ÷åòâåðã: " << endl;
+		cout << "Ð—Ð°Ð¼ÐµÑ‚ÐºÐ¸ Ð½Ð° Ñ‡ÐµÑ‚Ð²ÐµÑ€Ð³: " << endl;
 		while (!read.eof())
 		{
 			msg = "";
@@ -319,10 +319,10 @@ void ReadFriday()
 	string msg;
 	ifstream read;
 	read.open(path);
-	if (!read.is_open()) cout << "Îøèáêà ÷òåíèÿ ôàéëà!" << endl;
+	if (!read.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!" << endl;
 	else
 	{
-		cout << "Çàìåòêè íà ïÿòíèöó: " << endl;
+		cout << "Ð—Ð°Ð¼ÐµÑ‚ÐºÐ¸ Ð½Ð° Ð¿ÑÑ‚Ð½Ð¸Ñ†Ñƒ: " << endl;
 		while (!read.eof())
 		{
 			msg = "";
@@ -338,10 +338,10 @@ void ReadSaturday()
 	string msg;
 	ifstream read;
 	read.open(path);
-	if (!read.is_open()) cout << "Îøèáêà ÷òåíèÿ ôàéëà!" << endl;
+	if (!read.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!" << endl;
 	else
 	{
-		cout << "Çàìåòêè íà ñóááîòó: " << endl;
+		cout << "Ð—Ð°Ð¼ÐµÑ‚ÐºÐ¸ Ð½Ð° ÑÑƒÐ±Ð±Ð¾Ñ‚Ñƒ: " << endl;
 		while (!read.eof())
 		{
 			msg = "";
@@ -357,10 +357,10 @@ void ReadSunday()
 	string msg;
 	ifstream read;
 	read.open(path);
-	if (!read.is_open()) cout << "Îøèáêà ÷òåíèÿ ôàéëà!" << endl;
+	if (!read.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°!" << endl;
 	else
 	{
-		cout << "Çàìåòêè íà âîñêðåñåíüå: " << endl;
+		cout << "Ð—Ð°Ð¼ÐµÑ‚ÐºÐ¸ Ð½Ð° Ð²Ð¾ÑÐºÑ€ÐµÑÐµÐ½ÑŒÐµ: " << endl;
 		while (!read.eof())
 		{
 			msg = "";
@@ -376,7 +376,7 @@ void ClearMonday()
 	string path = "Monday.txt";
 	ofstream destroy(path);
 	destroy.open(path, ofstream::out | ofstream::trunc);
-	if (!destroy.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà";
+	if (!destroy.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°";
 
 	destroy.close();
 }
@@ -385,7 +385,7 @@ void ClearTuesday()
 	string path = "Tuesday.txt";
 	ofstream destroy(path);
 	destroy.open(path, ofstream::out | ofstream::trunc);
-	if (!destroy.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà";
+	if (!destroy.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°";
 
 	destroy.close();
 }
@@ -394,7 +394,7 @@ void ClearWednsday()
 	string path = "Wednsday.txt";
 	ofstream destroy(path);
 	destroy.open(path, ofstream::out | ofstream::trunc);
-	if (!destroy.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà";
+	if (!destroy.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°";
 
 	destroy.close();
 }
@@ -403,7 +403,7 @@ void ClearThursday()
 	string path = "Thursday.txt";
 	ofstream destroy(path);
 	destroy.open(path, ofstream::out | ofstream::trunc);
-	if (!destroy.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà";
+	if (!destroy.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°";
 
 	destroy.close();
 }
@@ -412,7 +412,7 @@ void ClearFriday()
 	string path = "Friday.txt";
 	ofstream destroy(path);
 	destroy.open(path, ofstream::out | ofstream::trunc);
-	if (!destroy.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà";
+	if (!destroy.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°";
 
 	destroy.close();
 }
@@ -421,7 +421,7 @@ void ClearSaturday()
 	string path = "Saturday.txt";
 	ofstream destroy(path);
 	destroy.open(path, ofstream::out | ofstream::trunc);
-	if (!destroy.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà";
+	if (!destroy.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°";
 
 	destroy.close();
 }
@@ -430,7 +430,7 @@ void ClearSunday()
 	string path = "Sunday.txt";
 	ofstream destroy(path);
 	destroy.open(path, ofstream::out | ofstream::trunc);
-	if (!destroy.is_open()) cout << "Îøèáêà îòêðûòèÿ ôàéëà";
+	if (!destroy.is_open()) cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°";
 
 	destroy.close();
 }
@@ -459,17 +459,17 @@ int main()
 
 	} while (!user1.Check());
 
-	cout << "Äîáðî ïîæàëîâàòü â ëè÷íûé åæåíåäåëüíèê!" << endl;
+	cout << "Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ Ð² Ð»Ð¸Ñ‡Ð½Ñ‹Ð¹ ÐµÐ¶ÐµÐ½ÐµÐ´ÐµÐ»ÑŒÐ½Ð¸Ðº!" << endl;
 	system("pause");
 	system("cls");
 
 	do
 	{
-		cout << "Âûáåðèòå íåîáõîäèìóþ îïåðàöèþ:" << endl
-			<< "1 - Ñäåëàòü çàìåòêó" << endl
-			<< "2 - Ïðî÷èòàòü çàìåòêè" << endl
-			<< "3 - Î÷èñòèòü çàìåòêè" <<endl
-			<< "4 - Âûõîä èç ïðîãðàììû" << endl;
+		cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼ÑƒÑŽ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸ÑŽ:" << endl
+			<< "1 - Ð¡Ð´ÐµÐ»Ð°Ñ‚ÑŒ Ð·Ð°Ð¼ÐµÑ‚ÐºÑƒ" << endl
+			<< "2 - ÐŸÑ€Ð¾Ñ‡Ð¸Ñ‚Ð°Ñ‚ÑŒ Ð·Ð°Ð¼ÐµÑ‚ÐºÐ¸" << endl
+			<< "3 - ÐžÑ‡Ð¸ÑÑ‚Ð¸Ñ‚ÑŒ Ð·Ð°Ð¼ÐµÑ‚ÐºÐ¸" <<endl
+			<< "4 - Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹" << endl;
 		cin >> choise1;
 		system("pause");
 		system("cls");
@@ -479,15 +479,15 @@ int main()
 		    case 1:
 				do
 				{
-					cout << "Âûáåðèòå äåíü íåäåëè äëÿ çàïèñè çàìåòêè:" << endl
-						<< "1 - Ïîíåäåëüíèê" << endl
-						<< "2 - Âòîðíèê" << endl
-						<< "3 - Ñðåäà" << endl
-						<< "4 - ×åòâåðã" << endl
-						<< "5 - Ïÿòíèöà" << endl
-						<< "6 - Ñóááîòà" << endl
-						<< "7 - Âîñêðåñåíüå" << endl
-						<< "8 - Âûéòè èç çàïèñè" << endl;
+					cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ½ÑŒ Ð½ÐµÐ´ÐµÐ»Ð¸ Ð´Ð»Ñ Ð·Ð°Ð¿Ð¸ÑÐ¸ Ð·Ð°Ð¼ÐµÑ‚ÐºÐ¸:" << endl
+						<< "1 - ÐŸÐ¾Ð½ÐµÐ´ÐµÐ»ÑŒÐ½Ð¸Ðº" << endl
+						<< "2 - Ð’Ñ‚Ð¾Ñ€Ð½Ð¸Ðº" << endl
+						<< "3 - Ð¡Ñ€ÐµÐ´Ð°" << endl
+						<< "4 - Ð§ÐµÑ‚Ð²ÐµÑ€Ð³" << endl
+						<< "5 - ÐŸÑÑ‚Ð½Ð¸Ñ†Ð°" << endl
+						<< "6 - Ð¡ÑƒÐ±Ð±Ð¾Ñ‚Ð°" << endl
+						<< "7 - Ð’Ð¾ÑÐºÑ€ÐµÑÐµÐ½ÑŒÐµ" << endl
+						<< "8 - Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð¸Ð· Ð·Ð°Ð¿Ð¸ÑÐ¸" << endl;
 					cin >> caseChoise1;
 					system("pause");
 					system("cls");
@@ -534,7 +534,7 @@ int main()
 						system("pause");
 						system("cls");
 						break;
-					default:cout << "Îøèáêà, òàêîé êîìàíäû íåò! Íàæìèòå êíîïêó, ÷òîá ïðîäîëæèòü." << endl;
+					default:cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ñ‚Ð°ÐºÐ¾Ð¹ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹ Ð½ÐµÑ‚! ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ ÐºÐ½Ð¾Ð¿ÐºÑƒ, Ñ‡Ñ‚Ð¾Ð± Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÑŒ." << endl;
 						system("pause");
 						system("cls");
 					}
@@ -544,15 +544,15 @@ int main()
 		    case 2:
 				do
 				{
-					cout << "Âûáåðèòå äåíü íåäåëè äëÿ ÷òåíèÿ çàìåòîê:" << endl
-						<< "1 - Ïîíåäåëüíèê" << endl
-						<< "2 - Âòîðíèê" << endl
-						<< "3 - Ñðåäà" << endl
-						<< "4 - ×åòâåðã" << endl
-						<< "5 - Ïÿòíèöà" << endl
-						<< "6 - Ñóááîòà" << endl
-						<< "7 - Âîñêðåñåíüå" << endl
-						<< "8 - Âûõîä èç ÷òåíèÿ çàìåòîê" << endl;
+					cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ½ÑŒ Ð½ÐµÐ´ÐµÐ»Ð¸ Ð´Ð»Ñ Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ð·Ð°Ð¼ÐµÑ‚Ð¾Ðº:" << endl
+						<< "1 - ÐŸÐ¾Ð½ÐµÐ´ÐµÐ»ÑŒÐ½Ð¸Ðº" << endl
+						<< "2 - Ð’Ñ‚Ð¾Ñ€Ð½Ð¸Ðº" << endl
+						<< "3 - Ð¡Ñ€ÐµÐ´Ð°" << endl
+						<< "4 - Ð§ÐµÑ‚Ð²ÐµÑ€Ð³" << endl
+						<< "5 - ÐŸÑÑ‚Ð½Ð¸Ñ†Ð°" << endl
+						<< "6 - Ð¡ÑƒÐ±Ð±Ð¾Ñ‚Ð°" << endl
+						<< "7 - Ð’Ð¾ÑÐºÑ€ÐµÑÐµÐ½ÑŒÐµ" << endl
+						<< "8 - Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ð·Ð°Ð¼ÐµÑ‚Ð¾Ðº" << endl;
 					cin >> caseChoise2;
 
 					switch (caseChoise2)
@@ -597,7 +597,7 @@ int main()
 						system("pause");
 						system("cls");
 						break;
-					default:cout << "Îøèáêà, òàêîé êîìàíäû íåò! Íàæìèòå êíîïêó, ÷òîá ïðîäîëæèòü." << endl;
+					default:cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ñ‚Ð°ÐºÐ¾Ð¹ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹ Ð½ÐµÑ‚! ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ ÐºÐ½Ð¾Ð¿ÐºÑƒ, Ñ‡Ñ‚Ð¾Ð± Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÑŒ." << endl;
 						system("pause");
 						system("cls");
 					}
@@ -607,15 +607,15 @@ int main()
 			case 3:
 				do
 				{
-					cout << "Âûáåðèòå äåíü íåäåëè äëÿ óäàëåíèÿ çàìåòîê:" << endl
-						<< "1 - Ïîíåäåëüíèê" << endl
-						<< "2 - Âòîðíèê" << endl
-						<< "3 - Ñðåäà" << endl
-						<< "4 - ×åòâåðã" << endl
-						<< "5 - Ïÿòíèöà" << endl
-						<< "6 - Ñóááîòà" << endl
-						<< "7 - Âîñêðåñåíüå" << endl
-						<< "8 - Âûõîä èç ÷òåíèÿ çàìåòîê" << endl;
+					cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ½ÑŒ Ð½ÐµÐ´ÐµÐ»Ð¸ Ð´Ð»Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ Ð·Ð°Ð¼ÐµÑ‚Ð¾Ðº:" << endl
+						<< "1 - ÐŸÐ¾Ð½ÐµÐ´ÐµÐ»ÑŒÐ½Ð¸Ðº" << endl
+						<< "2 - Ð’Ñ‚Ð¾Ñ€Ð½Ð¸Ðº" << endl
+						<< "3 - Ð¡Ñ€ÐµÐ´Ð°" << endl
+						<< "4 - Ð§ÐµÑ‚Ð²ÐµÑ€Ð³" << endl
+						<< "5 - ÐŸÑÑ‚Ð½Ð¸Ñ†Ð°" << endl
+						<< "6 - Ð¡ÑƒÐ±Ð±Ð¾Ñ‚Ð°" << endl
+						<< "7 - Ð’Ð¾ÑÐºÑ€ÐµÑÐµÐ½ÑŒÐµ" << endl
+						<< "8 - Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ð·Ð°Ð¼ÐµÑ‚Ð¾Ðº" << endl;
 					cin >> caseChoise3;
 
 					switch (caseChoise3)
@@ -660,7 +660,7 @@ int main()
 						system("pause");
 						system("cls");
 						break;
-					default:cout << "Îøèáêà, òàêîé êîìàíäû íåò! Íàæìèòå êíîïêó, ÷òîá ïðîäîëæèòü." << endl;
+					default:cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ñ‚Ð°ÐºÐ¾Ð¹ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹ Ð½ÐµÑ‚! ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ ÐºÐ½Ð¾Ð¿ÐºÑƒ, Ñ‡Ñ‚Ð¾Ð± Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÑŒ." << endl;
 						system("pause");
 						system("cls");
 					}
@@ -671,7 +671,7 @@ int main()
 			mainFlag = true;
 			break;
 
-		    default: cout << "Îøèáêà, òàêîé êîìàíäû íåò! Íàæìèòå êíîïêó, ÷òîá ïðîäîëæèòü." << endl;
+		    default: cout << "ÐžÑˆÐ¸Ð±ÐºÐ°, Ñ‚Ð°ÐºÐ¾Ð¹ ÐºÐ¾Ð¼Ð°Ð½Ð´Ñ‹ Ð½ÐµÑ‚! ÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ ÐºÐ½Ð¾Ð¿ÐºÑƒ, Ñ‡Ñ‚Ð¾Ð± Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÑŒ." << endl;
 			system("pause");
 			system("cls");
 			
